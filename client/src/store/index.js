@@ -71,7 +71,8 @@ export default new Vuex.Store({
       context.commit('setNick', nick);
     },
     setConnection(context) {
-      const connection = io("http://localhost:3000");
+      const connection = io("/");
+      // const connection = io("http://localhost:3000");
       context.commit('setConnection', connection);
     },
     setBotMessage(context, msg) {
